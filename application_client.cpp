@@ -7,44 +7,7 @@ Here you will provide the definiton of each member function. Remeber include you
 #include <iostream>
 using namespace std;
 
-/*
-Client::Client(string file_name)
-{
-  ifstream InputFile;
 
-  InputFile.open(file_name)
-
-  if(!InputFile)
-  {
-    cout << "Error: The path or file does not exist";
-    exit(1);
-  }
-
-  num_students = num_std;
-
-  student_inf = new string*[num_students];
-  for(int i=0; i<num_students; i++)
-  {
-    student_inf[i] = new string[2];
-  }
-
-  test_grade = new double*[num_students];
-  for(int i=0; i<num_students; i++)
-  {
-    student_inf[i] = new double[3];
-  }
-
-  while(!InputFile.eof())
-  {
-    InputFile >> student_inf[i][0] >> student_inf[i][1]; //2 dimensional array
-    InputFile >> test_grade[index][0] >> test_grade[index][1] >> test_grade[index][2];
-    index++;
-  }
-
-  InputFile.close()
-
-}
-*/
 
 void Client::set_client_info(string name, string ssn2, double BankAccount, double B)
 {
