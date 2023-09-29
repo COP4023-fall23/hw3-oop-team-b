@@ -1,4 +1,4 @@
-#idndef CLIENT_H
+#indef CLIENT_H
 #define CLIENT_H
 
 #include <iostream>
