@@ -1,26 +1,29 @@
+#include "client.h" // Include your client class definition
 #include <iostream>
 #include <string>
-#include <fstream>
-#include <Client.h>
-//inlcude all needed libraries
-
 
 using namespace std;
 
+int main() {
+   
+    Bank bank("client_data.txt");
 
-int main()
-{
-    //Define an instance of the class.
+    // Set client information for the first client (assuming there is at least one client in your file)
+    bank.set_client_info("CarlosMcpherson", "123-45-6789", 12345, 34567);
 
-    //Use the defined constructor to initialize you private members.
+    // Deposit money into account 1001
+    double newBalance = bank.deposit(12345, 10000.0);
+    cout << "New balance for account 1001: $" << newBalance << endl;
 
-    // Use the deposit function.
+    // Withdraw money from account 1001
+    string withdrawResult = bank.withdraw(12345, 2000.0);
+    cout << withdrawResult << endl;
 
-    // Use the withdraw function.
+    // Find a client by account number
+    bank.find_client(12345);
 
-    // Use the saving_info function.
+    // Save client information to a file
+    bank.saving_info("updated_client_data.txt");
 
-    // use find_client
-
-    // Create a second object and use the deep copy constructor to make a copy of you first object.
+    return 0;
 }
